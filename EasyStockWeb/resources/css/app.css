@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
+nav a {
     font-weight: bold;
 }

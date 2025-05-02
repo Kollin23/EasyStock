@@ -9,27 +9,24 @@
 <body class="bg-white text-black font-sans">
 
     <!-- Navbar -->
-    <header class="flex items-center justify-between px-6 py-4 border-b">
-        <!-- Logo -->
-        <div class="text-2xl">
+    <header class="sticky top-0 z-50 bg-white flex items-center justify-between px-6 py-4 border-b shadow-sm">
+        <div class="">
             <a href=""><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
         </div>
 
-        <!-- Centro -->
         <nav class="md:flex space-x-6">
             <a href="#caracteristicas" class="hover:underline">Características</a>
             <a href="#planes" class="hover:underline">Planes</a>
             <a href="#contacto" class="hover:underline">Contacto</a>
         </nav>
 
-        <!-- Botones derecha -->
         <div class="flex items-center space-x-6">
-            <a href="{{ route('login') }}" class="hover:underline">Iniciar sesión</a>
+            <a href="{{ route('login') }}" class="text-bold hover:underline">Iniciar sesión</a>
             <a href="{{ route('register') }}" class="px-4 py-2 bg-blue-600 text-white rounded">Regístrate</a>
         </div>
     </header>
 
-    <!-- Hero principal -->
+    <!-- Principal -->
     <section class="text-center px-4 py-12 max-w-3xl mx-auto">
         <h1 class="text-3xl md:text-4xl font-bold mb-4">Gestión de inventario y más.</h1>
         <p class="text-gray-700 mb-8">
@@ -80,10 +77,10 @@
     </section>
 
     <!-- Contacto -->
-    <!-- <section id="contacto" class="py-12 px-4 text-center">
+    <<section id="contacto" class="py-12 px-4 text-center">
         <h2 class="text-2xl font-bold mb-4">Contacto</h2>
-        <p class="text-gray-700">¿Tienes preguntas? Escríbenos a <a href="mailto:soporte@easystock.com" class="text-blue-600 underline">soporte@easystock.com</a></p>
-    </section> -->
+        <p class="text-gray-700">¿Tienes preguntas? Escríbenos a <a href="mailto:easystockhelp@gmail.com" class="text-blue-600 underline">easystockhelp@gmail.com</a></p>
+    </section>
 
 </body>
 </html>
