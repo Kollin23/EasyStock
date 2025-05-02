@@ -21,8 +21,8 @@
         </nav>
 
         <div class="flex items-center space-x-6">
-            <a href="{{ route('login') }}" class="text-bold hover:underline">Iniciar sesión</a>
-            <a href="{{ route('register') }}" class="px-4 py-2 bg-blue-600 text-white rounded">Regístrate</a>
+            <a href="{{ route('login') }}" class="font-bold hover:underline">Iniciar sesión</a>
+            <a href="{{ route('register') }}" class="font-bold px-4 py-2 bg-blue-600 text-white rounded">Regístrate</a>
         </div>
     </header>
 
@@ -30,20 +30,19 @@
     <section class="text-center px-4 py-12 max-w-3xl mx-auto">
         <h1 class="text-3xl md:text-4xl font-bold mb-4">Gestión de inventario y más.</h1>
         <p class="text-gray-700 mb-8">
-            EasyStock es la plataforma en la nube que te ayuda a controlar tu stock, 
-            automatizar la facturación y tener el control total de tu negocio en un solo lugar.
+            EasyStock es la plataforma en la nube que te ayuda a controlar tu stock, automatizar la facturación y tener el control total de tu negocio en un solo lugar.
         </p>
         <img src="{{ asset('images/graficos_easystock.png') }}" alt="Estadísticas del sistema" class="mx-auto w-full max-w-xl">
     </section>
 
     <!-- Características -->
-    <section id="caracteristicas" class="bg-gray-50 py-12 px-4">
+    <section id="caracteristicas" class="py-12 px-4">
         <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-            <div class="p-4 border rounded"><br><strong>Control de inventario</strong><br>Consulta el stock en tiempo real.</div>
-            <div class="p-4 border rounded"><br><strong>Estadísticas visuales</strong><br>Gráficos intuitivos sobre ventas e ingresos.</div>
-            <div class="p-4 border rounded"><br><strong>Facturación automática</strong><br>Crea facturas profesionales en PDF.</div>
-            <div class="p-4 border rounded"><br><strong>Venta por lotes</strong><br>Agrupa productos y véndelos juntos.</div>
-            <div class="p-4 border rounded"><br><strong>Accede desde cualquier lugar</strong><br>Conéctate desde cualquier dispositivo.</div>
+            <div class="p-4 border-2 border-blue-500 rounded"><strong>Control de inventario</strong><br>Consulta el stock en tiempo real y recibe avisos cuando haya poca cantidad.</div>
+            <div class="p-4 border-2 border-blue-500 rounded"><strong>Estadísticas visuales</strong><br>Gráficos de ventas, ingresos y productos más vendidos en un panel intuitivo.</div>
+            <div class="p-4 border-2 border-blue-500 rounded"><strong>Facturación automática</strong><br>Crea facturas profesionales en PDF de forma rápida y sin complicaciones.</div>
+            <div class="p-4 border-2 border-blue-500 rounded"><strong>Venta por lotes</strong><br>Agrupa productos y descuenta sus componentes al venderlos juntos.</div>
+            <div class="p-4 border-2 border-blue-500 rounded"><strong>Accede desde cualquier lugar</strong><br>Gestiona tu negocio desde cualquier dispositivo con conexión a Internet.</div>
         </div>
     </section>
 
@@ -78,7 +77,7 @@
 
     <!-- Contacto -->
     <<section id="contacto" class="py-12 px-4 text-center">
-        <h2 class="text-2xl font-bold mb-4">Contacto</h2>
+        <h2 class="text-3xl font-bold mb-4">Contacto</h2>
         <p class="text-gray-700">¿Tienes preguntas? Escríbenos a <a href="mailto:easystockhelp@gmail.com" class="text-blue-600 underline">easystockhelp@gmail.com</a></p>
     </section>
 
