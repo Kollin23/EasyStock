@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyStock</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-white text-black font-sans">
 
@@ -23,9 +23,9 @@
         </nav>
 
         <!-- Botones derecha -->
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-6">
             <a href="{{ route('login') }}" class="hover:underline">Iniciar sesión</a>
-            <a href="{{ route('register') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Regístrate</a>
+            <a href="{{ route('register') }}" class="px-4 py-2 bg-blue-600 text-white rounded">Regístrate</a>
         </div>
     </header>
 
