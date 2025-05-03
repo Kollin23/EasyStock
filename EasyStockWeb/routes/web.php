@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 // LOGIN Y REGISTER
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
