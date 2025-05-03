@@ -1,4 +1,4 @@
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+@vite('resources/css/app.css')
 
 <!-- Session Status -->
 <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -61,3 +61,5 @@
         <a href="#">Contáctanos</a>
     </footer>
 </div>
+
+@vite('resources/js/app.js')
