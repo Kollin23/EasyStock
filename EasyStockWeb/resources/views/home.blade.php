@@ -38,11 +38,11 @@
     <!-- Características -->
     <section id="caracteristicas" class="py-12 px-4">
         <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 text-center">
-            <div class="p-4 border-2 border-blue-500 rounded"><strong>Control de inventario</strong><br>Consulta el stock en tiempo real y recibe avisos cuando haya poca cantidad.</div>
-            <div class="p-4 border-2 border-blue-500 rounded"><strong>Estadísticas visuales</strong><br>Gráficos de ventas, ingresos y productos más vendidos en un panel intuitivo.</div>
-            <div class="p-4 border-2 border-blue-500 rounded"><strong>Facturación automática</strong><br>Crea facturas profesionales en PDF de forma rápida y sin complicaciones.</div>
-            <div class="p-4 border-2 border-blue-500 rounded"><strong>Venta por lotes</strong><br>Agrupa productos y descuenta sus componentes al venderlos juntos.</div>
-            <div class="p-4 border-2 border-blue-500 rounded"><strong>Accede desde cualquier lugar</strong><br>Gestiona tu negocio desde cualquier dispositivo con conexión a Internet.</div>
+            <div class="p-4 border-2 border-blue-500 rounded-lg"><strong>Control de inventario</strong><br>Consulta el stock en tiempo real y recibe avisos cuando haya poca cantidad.</div>
+            <div class="p-4 border-2 border-blue-500 rounded-lg"><strong>Estadísticas visuales</strong><br>Gráficos de ventas, ingresos y productos más vendidos en un panel intuitivo.</div>
+            <div class="p-4 border-2 border-blue-500 rounded-lg"><strong>Facturación automática</strong><br>Crea facturas profesionales en PDF de forma rápida y sin complicaciones.</div>
+            <div class="p-4 border-2 border-blue-500 rounded-lg"><strong>Venta por lotes</strong><br>Agrupa productos y descuenta sus componentes al venderlos juntos.</div>
+            <div class="p-4 border-2 border-blue-500 rounded-lg"><strong>Accede desde cualquier lugar</strong><br>Gestiona tu negocio desde cualquier dispositivo con conexión a Internet.</div>
         </div>
     </section>
 
@@ -50,25 +50,29 @@
     <section id="planes" class="bg-blue-600 text-white py-12 px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Planes</h2>
         <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-            <div class="bg-white text-black p-6 rounded shadow">
-                <h3 class="text-xl font-bold mb-2">Plan Básico</h3>
-                <p class="mb-4">0 €/mes – Gratis para siempre</p>
+            <div class="bg-white text-black p-6 rounded-lg shadow">
+                <h3 class="text-2xl font-bold mb-2">Plan Básico</h3>
+                <p class="mb-4 font-bold">0 €/mes - Gratis para siempre</p>
+                <p class="mb-4">Ideal para autónomos o pequeños negocios que empiezan.</p>
+                <p class="mb-2 font-bold text-xl">Incluye:</p>
                 <ul class="list-disc pl-5 text-sm space-y-1">
                     <li>Hasta 50 productos</li>
-                    <li>Facturas en PDF</li>
-                    <li>Estadísticas básicas</li>
+                    <li>Facturación en PDF manual</li>
+                    <li>Estadísticas básicas de ventas</li>
                     <li>Acceso desde cualquier lugar</li>
                     <li>Soporte por correo electrónico</li>
                 </ul>
             </div>
-            <div class="bg-white text-black p-6 rounded shadow">
-                <h3 class="text-xl font-bold mb-2">Plan Profesional</h3>
-                <p class="mb-4">19,99 €/mes o 199 €/año <span class="text-green-600">(ahorras 2 meses)</span></p>
+            <div class="bg-white text-black p-6 rounded-lg shadow">
+                <h3 class="text-2xl font-bold mb-2">Plan Profesional</h3>
+                <p class="mb-4 font-bold">19,99 €/mes o 199 €/año <br> <span class="text-green-600">(ahorras 2 meses)</span></p>
+                <p class="mb-4">Pensado para negocios en crecimiento que necesitan más control.</p>
+                <p class="mb-2 font-bold text-xl">Incluye el Plan Básico<span class="text-blue-600">+</span>:</p>
                 <ul class="list-disc pl-5 text-sm space-y-1">
-                    <li>Productos ilimitados</li>
+                    <li>Inventario ilimitado</li>
                     <li>Facturación automática</li>
                     <li>Estadísticas avanzadas</li>
-                    <li>Gestión de lotes</li>
+                    <li>Gestión de productos por lotes</li>
                     <li>Soporte prioritario por chat y correo</li>
                 </ul>
             </div>
