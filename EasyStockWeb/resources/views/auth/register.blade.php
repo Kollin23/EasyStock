@@ -23,8 +23,8 @@
 
         <!-- Teléfono -->
         <div class="input-group">
-        <x-text-input id="telefono" class="text-input" type="text" name="telefono" required autofocus autocomplete="telefono" placeholder=" " />
-        <x-input-label for="telefono" class="input-label" :value="__('Teléfono')" />
+        <x-text-input id="telefono" class="text-input" type="text" name="phone" required autofocus autocomplete="telefono" placeholder=" " />
+        <x-input-label for="phone" class="input-label" :value="__('Teléfono')" />
         </div>
 
         <!-- Correo Electrónico -->
