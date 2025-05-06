@@ -50,6 +50,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('setup.products');
+        return redirect(route('setup.products', absolute: false));
     }
 }
