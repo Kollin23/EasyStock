@@ -12,6 +12,10 @@ Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
 Route::post('register', [RegisteredUserController::class, 'store'])->name('register');
 
+// PREDASHBOARD/SETUP PRODUCTS
+Route::get('/setup/products', [App\Http\Controllers\SetupProductController::class, 'create'])->name('setup.products');
+Route::post('/setup/products', [App\Http\Controllers\SetupProductController::class, 'store'])->name('setup.products.store');
+
 // DASHBOARD
 Route::get('/dashboard', function () {
     return view('dashboard');
