@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -15,7 +17,6 @@ class ProductController extends Controller
         ]);
 
         Product::create([
-            'user_id' => $request->user_id ?? Auth::id(),
             'name' => $request->name,
             'stock' => $request->stock,
             'price' => $request->price,
