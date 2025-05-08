@@ -5,7 +5,7 @@
 
 <!-- Logo -->
 <div class="logo-container">
-<a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
+    <a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
 </div>
 
 <!-- Formulario -->
@@ -36,7 +36,7 @@
         <!-- Contraseña -->
         <div class="input-group">
         <button type="button" id="togglePassword">
-            <img src="{{asset('img/contraseña/cerrar-ojo.png')}}" alt="Ver contraseña" id="eyeIcon" style="width:20px;">
+            <img src="{{asset('images/contraseña/cerrar-ojo.png')}}" alt="Ver contraseña" id="eyeIcon" style="width:20px;">
         </button> 
         <x-text-input id="password" class="text-input" type="password" name="password" required autofocus autocomplete="password" placeholder=" " />
         <x-input-label for="password" class="input-label" :value="__('Contraseña')" />
@@ -45,7 +45,7 @@
         <!-- Confirmar Contraseña -->
         <div class="input-group">
         <button type="button" id="togglePassword2">
-            <img src="{{asset('img/contraseña/cerrar-ojo.png')}}" alt="Ver contraseña" id="eyeIcon2" style="width:20px;">
+            <img src="{{asset('images/contraseña/cerrar-ojo.png')}}" alt="Ver contraseña" id="eyeIcon2" style="width:20px;">
         </button>
         <x-text-input id="password2" class="text-input" type="password" name="password_confirmation" required autofocus autocomplete="new-password" placeholder=" " />
         <x-input-label for="password_confirmation" class="input-label" :value="__('Repetir Contraseña')" />

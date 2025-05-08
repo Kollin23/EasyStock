@@ -1,4 +1,11 @@
-<x-app-layout>
+<!-- Session Status -->
+<x-auth-session-status class="mb-4" :status="session('status')" />
+
+<!-- Logo -->
+<div class="logo-container">
+    <a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
+</div>
+
     <div class="max-w-4xl mx-auto py-10">
         <h2 class="text-2xl font-bold mb-6">Añade tus productos</h2>
 
@@ -38,4 +45,4 @@
             productIndex++;
         }
     </script>
-</x-app-layout>
+

@@ -28,7 +28,7 @@ togglePassword.addEventListener('click', function () {
         eyeIcon.src = "img/contraseña/ojo.png";
     } else {
         passwordInput.type = 'password';
-        eyeIcon.src = "img/contraseña/cerrar-ojo.png";
+        eyeIcon.src = "images/contraseña/cerrar-ojo.png";
     }
 });
 
@@ -39,9 +39,9 @@ const eyeIcon2 = document.getElementById('eyeIcon2');
 togglePassword2.addEventListener('click', function () {
     if (passwordInput2.type === 'password') {
         passwordInput2.type = 'text';
-        eyeIcon2.src = "img/contraseña/ojo.png";
+        eyeIcon2.src = "images/contraseña/ojo.png";
     } else {
         passwordInput2.type = 'password';
-        eyeIcon2.src = "img/contraseña/cerrar-ojo.png";
+        eyeIcon2.src = "images/contraseña/cerrar-ojo.png";
     }
 });

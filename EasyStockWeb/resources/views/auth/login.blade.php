@@ -1,11 +1,12 @@
 @vite('resources/css/app.css')
+@vite('resources/js/app.js')
 
 <!-- Session Status -->
 <x-auth-session-status class="mb-4" :status="session('status')" />
 
 <!-- Logo -->
 <div class="logo-container">
-<a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
+    <a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
 </div>
 
 <!-- Formulario -->
@@ -25,7 +26,7 @@
         <!-- Password -->
         <div class="input-group">
             <button type="button" id="togglePassword">
-                <img src="{{asset('img/contraseña/cerrar-ojo.png')}}" alt="Ver contraseña" id="eyeIcon" style="width:20px;">
+                <img src="{{asset('images/contraseña/cerrar-ojo.png')}}" alt="Ver contraseña" id="eyeIcon" style="width:20px;">
             </button>
             <x-text-input id="password" class="text-input" type="password" name="password" required
                 autocomplete="current-password" placeholder=" " />
@@ -61,5 +62,3 @@
         <a href="#">Contáctanos</a>
     </footer>
 </div>
-
-@vite('resources/js/app.js')

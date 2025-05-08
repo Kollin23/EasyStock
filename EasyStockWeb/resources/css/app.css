@@ -107,10 +107,6 @@ nav a {
     font-weight: bold;
 }
 
-a:visited {
-    color: black;
-}
-
 /* Footer */
 .footer {
     background-color: #1F5EA8;
