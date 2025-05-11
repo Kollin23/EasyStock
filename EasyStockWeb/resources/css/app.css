@@ -68,6 +68,12 @@ nav a {
     border-radius: 0;
 }
 
+.text-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
 /* Botón de inicio de sesión */
 .button-primary {
     display: block;
