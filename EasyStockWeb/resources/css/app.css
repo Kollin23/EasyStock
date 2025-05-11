@@ -65,6 +65,7 @@ nav a {
     border-bottom: 2px solid #1F5EA8;
     outline: none;
     font-size: 16px;
+    border-radius: 0;
 }
 
 /* Botón de inicio de sesión */
