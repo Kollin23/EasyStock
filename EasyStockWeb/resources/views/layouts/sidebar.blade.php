@@ -7,7 +7,7 @@
             <img src="{{ asset('images/Combo Chart.png') }}" alt="Ventas" class="h-8 w-8">
             <span class="ml-3 hidden group-hover:inline">Ventas</span>
         </a>
-        <a href="{{ route('stock.index') }}" class="group flex items-center px-4 py-2">
+        <a href="{{ route('products.index') }}" class="group flex items-center px-4 py-2">
             <img src="{{ asset('images/Open Box.png') }}" alt="Stock" class="h-8 w-8">
             <span class="ml-3 hidden group-hover:inline">Stock</span>
         </a>
