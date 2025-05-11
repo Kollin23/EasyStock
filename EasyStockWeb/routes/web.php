@@ -21,6 +21,15 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+// STOCK
+Route::middleware(['auth'])->group(function () {
+    Route::get('/stock', [ProductController::class, 'index'])->name('stock.index');
+    Route::get('/stock/{product}/edit', [ProductController::class, 'edit'])->name('stock.edit');
+    Route::put('/stock/{product}', [ProductController::class, 'update'])->name('stock.update');
+    Route::get('/stock/create', [ProductController::class, 'create'])->name('stock.create');
+    Route::post('/stock', [ProductController::class, 'store'])->name('stock.store');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
