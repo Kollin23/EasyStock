@@ -22,13 +22,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-// STOCK
+// PRODUCTS
 Route::middleware(['auth'])->group(function () {
-    Route::get('/stock', [ProductController::class, 'index'])->name('stock.index');
-    Route::get('/stock/{product}/edit', [ProductController::class, 'edit'])->name('stock.edit');
-    Route::put('/stock/{product}', [ProductController::class, 'update'])->name('stock.update');
-    Route::get('/stock/create', [ProductController::class, 'create'])->name('stock.create');
-    Route::post('/stock', [ProductController::class, 'store'])->name('stock.store');
+    Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+    Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+    Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 });
 
 Route::middleware('auth')->group(function () {
