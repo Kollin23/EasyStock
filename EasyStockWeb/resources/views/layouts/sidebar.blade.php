@@ -1,13 +1,13 @@
 <aside id="sidebar" class="group flex flex-col w-16 hover:w-56 transition-all duration-300 bg-white border-r shadow-md overflow-hidden">
     <div class="flex items-center justify-center h-16">
-        <a href=""><img src="{{ asset('images/logo_pequenyo.png') }}" alt="Logo Pequeño"></a>
+        <a href="{{ route('dashboard') }}"><img src="{{ asset('images/logo_pequenyo.png') }}" alt="Logo Pequeño"></a>
     </div>
     <nav class="flex-1 space-y-6 mt-6 text-base">
         <a href="#" class="group flex items-center px-4 py-2">
             <img src="{{ asset('images/Combo Chart.png') }}" alt="Ventas" class="h-8 w-8">
             <span class="ml-3 hidden group-hover:inline">Ventas</span>
         </a>
-        <a href="#" class="group flex items-center px-4 py-2">
+        <a href="{{ route('stock.index') }}" class="group flex items-center px-4 py-2">
             <img src="{{ asset('images/Open Box.png') }}" alt="Stock" class="h-8 w-8">
             <span class="ml-3 hidden group-hover:inline">Stock</span>
         </a>
