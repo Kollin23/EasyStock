@@ -4,7 +4,7 @@
     <div class="max-w-4xl mx-auto py-10">
         <h2 class="text-2xl font-bold mb-6">Mis productos</h2>
 
-        <a href="{{ route('products.create') }}" class="bg-green-500 text-white px-4 py-2 rounded mb-6 inline-block">Añadir nuevo producto</a>
+        <a href="{{ route('products.create') }}" class="font-bold px-4 py-2 bg-blue-600 text-white rounded">Añadir nuevo producto</a>
 
         <table class="w-full table-auto border">
             <thead>
