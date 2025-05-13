@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 
 // PRODUCTS
 Route::middleware(['auth'])->group(function () {
+    Route::resource('products', ProductController::class);
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
