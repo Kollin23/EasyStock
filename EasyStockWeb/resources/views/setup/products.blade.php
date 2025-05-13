@@ -17,7 +17,7 @@
                     <input type="text" name="products[0][name]" placeholder="Nombre del producto" class="input mb-2 w-full" required>
                     <input type="text" name="products[0][description]" placeholder="Descipción del producto" class="input mb-2 w-full" required>
                     <input type="number" name="products[0][stock]" placeholder="Stock disponible" class="input mb-2 w-full" required>
-                    <input type="number" name="products[0][price]" placeholder="Precio" class="input w-full" required>
+                    <input type="number" name="products[0][price]" placeholder="Precio" step="0.01" class="input w-full" required>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
                     <input type="text" name="products[${productIndex}][name]" placeholder="Nombre del producto" class="input mb-2 w-full" required>
                     <input type="text" name="products[${productIndex}][description]" placeholder="Descripción del producto" class="input mb-2 w-full" required>
                     <input type="number" name="products[${productIndex}][stock]" placeholder="Stock disponible" class="input mb-2 w-full" required>
-                    <input type="number" name="products[${productIndex}][price]" placeholder="Precio" class="input w-full" required>
+                    <input type="number" name="products[${productIndex}][price]" placeholder="Precio" step="0.01" class="input w-full" required>
                 </div>
             `;
             container.insertAdjacentHTML('beforeend', html);
