@@ -5,7 +5,7 @@
 <x-auth-session-status class="mb-4" :status="session('status')" />
 
 <!-- Logo -->
-<div class="logo-container">
+<div class="logo-container pt-6">
     <a href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
 </div>
 
