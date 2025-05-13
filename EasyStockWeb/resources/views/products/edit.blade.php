@@ -4,12 +4,6 @@
 <div class="max-w-3xl mx-auto py-10">
     <h2 class="text-2xl font-bold mb-6">Editar producto</h2>
 
-    @if (session('success'))
-        <div class="bg-green-100 text-green-700 px-4 py-2 rounded mb-4">
-            {{ session('success') }}
-        </div>
-    @endif
-
     <form method="POST" action="{{ route('products.update', $product) }}">
         @csrf
         @method('PUT')
