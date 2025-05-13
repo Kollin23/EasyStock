@@ -10,7 +10,7 @@
             <thead>
                 <tr class="bg-gray-200">
                     <th class="px-4 py-2">Nombre</th>
-                    <th class="px-4 py-2">Descipción</th>
+                    <th class="px-4 py-2">Descripción</th>
                     <th class="px-4 py-2">Stock</th>
                     <th class="px-4 py-2">Precio</th>
                     <th class="px-4 py-2">Acciones</th>
