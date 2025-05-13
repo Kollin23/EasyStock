@@ -16,7 +16,7 @@
                     <th class="px-4 py-2">Acciones</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-center">
                 @foreach ($products as $product)
                     <tr class="border-t">
                         <td class="px-4 py-2">{{ $product->name }}</td>
@@ -25,6 +25,11 @@
                         <td class="px-4 py-2">{{ $product->price }} €</td>
                         <td class="px-4 py-2">
                             <a href="{{ route('products.edit', $product) }}" class="text-blue-600">Editar</a>
+                            <form action="{{ route('products.edit', $product) }}" method="POST" class="inline-block" onsubmit="return confirm('¿Estás seguro de que quieres eliminar este producto?');">
+                                @csrf
+                                @method('DELETE')
+                                    <button type="submit" class="text-red-600 hover:">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
