@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
     Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
     Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 });
 
 Route::middleware('auth')->group(function () {

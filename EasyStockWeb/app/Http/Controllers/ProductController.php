@@ -14,10 +14,16 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
+    public function create()
+    {
+        return view('products.create');
+    }
+
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
             'stock' => 'required|integer|min:0',
             'price' => 'required|numeric|min:0',
         ]);
@@ -25,13 +31,13 @@ class ProductController extends Controller
         Product::create([
             'user_id' => Auth::id(),
             'name' => $request->name,
+            'description' => $request->description ?? null,
             'stock' => $request->stock,
             'price' => $request->price,
             'category_id' => $request->category_id ?? null,
-            'description' => $request->description ?? null,
         ]);
 
-        return response()->json(['message' => 'Producto creado'], 200);
+        return redirect()->route('products.index')->with('success', 'Producto creado correctamente');
     }
 
     public function edit(Product $product)

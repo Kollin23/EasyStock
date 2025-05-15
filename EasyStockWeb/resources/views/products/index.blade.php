@@ -5,6 +5,7 @@
         <h2 class="text-2xl font-bold mb-6">Mis productos</h2>
 
         <a href="{{ route('products.create') }}" class="font-bold px-4 py-2 bg-blue-600 text-white rounded">Añadir nuevo producto</a>
+
         <div class="py-6">
         <table class="w-full table-auto border">
             <thead>
