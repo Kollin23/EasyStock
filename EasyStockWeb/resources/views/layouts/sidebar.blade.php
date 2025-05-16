@@ -3,7 +3,7 @@
         <a href="{{ route('dashboard') }}"><img src="{{ asset('images/logo_pequenyo.png') }}" alt="Logo Pequeño"></a>
     </div>
     <nav class="flex-1 space-y-6 mt-6 text-base">
-        <a href="#" class="group flex items-center px-4 py-2">
+        <a href="{{ route('invoices.index') }}" class="group flex items-center px-4 py-2">
             <img src="{{ asset('images/Combo Chart.png') }}" alt="Ventas" class="h-8 w-8">
             <span class="ml-3 hidden group-hover:inline">Ventas</span>
         </a>
