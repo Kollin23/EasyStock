@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const passwordField = document.getElementById('password');
     const passwordConfirmField = document.getElementById('password2');
-    const errorElement = document.getElementById('password-error'); // El elemento de error
+    const errorElement = document.getElementById('password-error');
 
     // Agregar un evento 'input' a los campos de contraseña
     passwordField.addEventListener('input', validatePasswords);
@@ -25,7 +25,7 @@ const eyeIcon = document.getElementById('eyeIcon');
 togglePassword.addEventListener('click', function () {
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        eyeIcon.src = "img/contraseña/ojo.png";
+        eyeIcon.src = "images/contraseña/ojo.png";
     } else {
         passwordInput.type = 'password';
         eyeIcon.src = "images/contraseña/cerrar-ojo.png";

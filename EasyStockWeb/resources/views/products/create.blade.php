@@ -32,7 +32,7 @@
                class="bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded">
                 Cancelar
             </a>
-            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                 Guardar producto
             </button>
         </div>

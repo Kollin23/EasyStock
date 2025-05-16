@@ -4,7 +4,7 @@
     <div class="max-w-4xl mx-auto py-10">
         <h2 class="text-2xl font-bold mb-6">Mis productos</h2>
 
-        <a href="{{ route('products.create') }}" class="font-bold px-4 py-2 bg-blue-600 text-white rounded">Añadir nuevo producto</a>
+        <a href="{{ route('products.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Añadir nuevo producto</a>
 
         <div class="py-6">
         <table class="w-full table-auto border">
@@ -25,7 +25,7 @@
                         <td class="px-4 py-2">{{ $product->stock }}</td>
                         <td class="px-4 py-2">{{ $product->price }} €</td>
                         <td class="px-4 py-2">
-                            <a href="{{ route('products.edit', $product) }}" class="text-blue-600">Editar</a>
+                            <a href="{{ route('products.edit', $product) }}" class="text-blue-600 hover:underline">Editar</a>
                             <form action="{{ route('products.destroy', $product) }}" method="POST" class="inline-block" onsubmit="return confirm('¿Estás seguro de que quieres eliminar este producto?');">
                                 @csrf
                                 @method('DELETE')

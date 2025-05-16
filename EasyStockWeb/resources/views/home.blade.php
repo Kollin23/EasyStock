@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyStock</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/script.js'])
 </head>
 <body class="bg-white text-black font-sans">
 
@@ -22,7 +22,7 @@
 
         <div class="flex items-center space-x-6">
             <a href="{{ route('login') }}" class="font-bold hover:underline">Iniciar sesión</a>
-            <a href="{{ route('register') }}" class="font-bold px-4 py-2 bg-blue-600 text-white rounded">Regístrate</a>
+            <a href="{{ route('register') }}" class="font-bold px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Regístrate</a>
         </div>
     </header>
 

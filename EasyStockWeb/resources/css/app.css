@@ -137,10 +137,6 @@ a {
     font-weight: normal;
 }
 
-a:hover {
-    font-weight: bold;
-}
-
 /* Link forgot password */
 .forgot-passwd {
     position: relative;

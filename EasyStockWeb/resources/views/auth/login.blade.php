@@ -1,5 +1,5 @@
 @vite('resources/css/app.css')
-@vite('resources/js/app.js')
+@vite('resources/js/script.js')
 
 <!-- Session Status -->
 <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -51,7 +51,7 @@
 
     <div class="flex items-center justify-end mt-4">
             <x-secondary-button class="button-secondary">
-                <a href="{{route('register')}}" style="color: black;">REGÍSTRATE</a>
+                <a href="{{route('register')}}" style="color: black;" class="hover:underline">REGÍSTRATE</a>
             </x-secondary-button>
     </div>
 
