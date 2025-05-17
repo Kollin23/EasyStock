@@ -16,10 +16,10 @@
         </thead>
         <tbody>
             @foreach ($invoices as $invoice)
-                <tr class="border-t">
+                <tr class="border-t text-center">
                     <td class="px-4 py-2">{{ $invoice->id }}</td>
                     <td class="px-4 py-2">{{ $invoice->total }} €</td>
-                    <td class="px-4 py-2">{{ $invoice->date->format('d/m/Y H:i') }}</td>
+                    <td class="px-4 py-2">{{ $invoice->date }}</td>
                 </tr>
             @endforeach
         </tbody>

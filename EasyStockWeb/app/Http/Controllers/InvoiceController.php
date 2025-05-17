@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Invoice;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
+use Datetime;
 
 class InvoiceController extends Controller
 {
@@ -34,7 +35,7 @@ class InvoiceController extends Controller
         $invoice = Invoice::create([
             'user_id' => Auth::id(),
             'total' => $total,
-            'date' => now(),
+            'date' => new DateTime(),
         ]);
 
         $invoice->products()->attach($product->id, [
