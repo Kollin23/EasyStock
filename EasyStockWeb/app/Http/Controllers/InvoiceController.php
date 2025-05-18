@@ -38,7 +38,7 @@ class InvoiceController extends Controller
             'date' => new DateTime(),
         ]);
 
-        $invoice->products()->attach($product->id, [ // modificacion de Laravel para un DB:insert
+        $invoice->products()->attach($product->id, [ // modificacion de Laravel para un insert
             'quantity' => $request->quantity,
             'price_at_purchase' => $product->price,
         ]);
