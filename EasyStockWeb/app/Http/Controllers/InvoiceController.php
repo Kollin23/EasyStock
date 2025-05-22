@@ -25,12 +25,17 @@ class InvoiceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'product_id' => 'required|exists:products,id',
-            'quantity' => 'required|integer|min:1',
+            'products' => 'required|array|min:1',
+            'products.*.id' => 'required|exists:products,id',
+            'products.*.quantity' => 'required|integer|min:1',
         ]);
 
-        $product = Product::find($request->product_id);
-        $total = $product->price * $request->quantity;
+        $total = 0;
+
+        foreach ($request->products as $item) {
+            $product = Product::find($item['id']);
+            $total += $product->price * $item['quantity'];
+        }
 
         $invoice = Invoice::create([
             'user_id' => Auth::id(),
@@ -38,12 +43,17 @@ class InvoiceController extends Controller
             'date' => new DateTime(),
         ]);
 
-        $invoice->products()->attach($product->id, [ // modificacion de Laravel para un insert
-            'quantity' => $request->quantity,
-            'price_at_purchase' => $product->price,
-        ]);
+        foreach ($request->products as $item) {
+            $product = Product::find($item['id']);
 
-        $product->decrement('stock', $request->quantity);
+            $invoice->products()->attach($product->id, [ // modificacion de Laravel para un insert
+                'quantity' => $item['quantity'],
+                'price_at_purchase' => $product->price,
+            ]);
+
+            $product->stock -= $item['quantity'];
+            $product->save();
+        }
 
         return redirect()->route('invoices.index')->with('success', 'Venta registrada.');
     }
