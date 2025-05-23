@@ -12,7 +12,7 @@
             </form>
 
             <a href="{{ route('products.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Añadir nuevo producto</a>
-</div>
+    </div>
 
 
         <div class="py-6">

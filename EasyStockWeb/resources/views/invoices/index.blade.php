@@ -3,8 +3,10 @@
 @section('content')
 <div class="max-w-3xl mx-auto py-10">
     <h2 class="text-2xl font-bold mb-4">Listado de ventas</h2>
-
-    <a href="{{ route('invoices.create') }}" class="mb-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Registrar venta</a>
+    
+    <div class="text-right mb-4">
+        <a href="{{ route('invoices.create') }}" class="mb-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Registrar venta</a>
+    </div>
 
     <table class="w-full table-auto border">
         <thead class="bg-gray-200">
