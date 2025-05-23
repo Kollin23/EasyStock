@@ -6,8 +6,7 @@
 
         <div class="flex justify-between items-center mb-4">
             <form method="GET" action="{{ route('products.index') }}" class="flex items-center space-x-2">
-                <input type="text" name="search" placeholder="Buscar producto..." value="{{ request('search') }}" class="px-4 py-2 border rounded"
-                >
+                <input type="text" name="search" placeholder="Buscar producto..." value="{{ request('search') }}" class="px-4 py-2 border rounded">
                 <button type="submit" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Buscar</button>
             </form>
 
