@@ -4,7 +4,16 @@
     <div class="max-w-4xl mx-auto py-10">
         <h2 class="text-2xl font-bold mb-6">Mis productos</h2>
 
-        <a href="{{ route('products.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Añadir nuevo producto</a>
+        <div class="flex justify-between items-center mb-4">
+            <form method="GET" action="{{ route('products.index') }}" class="flex items-center space-x-2">
+                <input type="text" name="search" placeholder="Buscar producto..." value="{{ request('search') }}" class="px-4 py-2 border rounded"
+                >
+                <button type="submit" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Buscar</button>
+            </form>
+
+            <a href="{{ route('products.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Añadir nuevo producto</a>
+</div>
+
 
         <div class="py-6">
         <table class="w-full table-auto border">

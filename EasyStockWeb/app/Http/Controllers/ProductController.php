@@ -8,9 +8,16 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::where('user_id', Auth::id())->get();
+        $query = Product::query()->where('user_id', auth()->id());
+
+        if ($request->has('search') && $request->search) {
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+
+        $products = $query->get();
+
         return view('products.index', compact('products'));
     }
 
