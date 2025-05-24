@@ -7,6 +7,7 @@ use App\Models\Invoice;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Datetime;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class InvoiceController extends Controller
 {
@@ -56,5 +57,27 @@ class InvoiceController extends Controller
         }
 
         return redirect()->route('invoices.index')->with('success', 'Venta registrada.');
+    }
+
+    public function invoices()
+    {
+        $invoices = Invoice::where('user_id', Auth::id())->latest()->get();
+        return view('invoices.invoices', compact('invoices'));
+    }
+
+    public function show(Invoice $invoice)
+    {
+        $invoice->load('products');
+
+        return view('invoices.show', compact('invoice'));
+    }
+
+    public function downloadPDF(Invoice $invoice)
+    {
+        $invoice->load('products');
+
+        $pdf = Pdf::loadView('invoices.pdf', compact('invoice'));
+
+        return $pdf->download('EasyStock_factura_'.$invoice->id.'.pdf');
     }
 }

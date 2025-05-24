@@ -19,4 +19,8 @@ class Invoice extends Model
             ->withPivot('quantity', 'price_at_purchase')
             ->withTimestamps();
     }
+
+    protected $casts = [
+        'date' => 'datetime',
+    ];
 }

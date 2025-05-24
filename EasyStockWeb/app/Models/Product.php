@@ -23,7 +23,7 @@ class Product extends Model
     public function invoices()
     {
         return $this->belongsToMany(Invoice::class, 'invoice_product')
-                    ->withPivot('quantity', 'price_at_purchase')
-                    ->withTimestamps();
+            ->withPivot('quantity', 'price_at_purchase')
+            ->withTimestamps();
     }
 }

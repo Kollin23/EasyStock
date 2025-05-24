@@ -2,11 +2,7 @@
 
 @section('content')
 <div class="max-w-3xl mx-auto py-10">
-    <h2 class="text-2xl font-bold mb-4">Listado de ventas</h2>
-    
-    <div class="text-right mb-4">
-        <a href="{{ route('invoices.create') }}" class="mb-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Registrar venta</a>
-    </div>
+    <h2 class="text-2xl font-bold mb-4">Facturación</h2>
 
     <table class="w-full table-auto border">
         <thead class="bg-gray-200">
@@ -14,6 +10,7 @@
                 <th class="px-4 py-2">ID</th>
                 <th class="px-4 py-2">Total</th>
                 <th class="px-4 py-2">Fecha</th>
+                <th class="px-4 py-2">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +19,10 @@
                     <td class="px-4 py-2">{{ $invoice->id }}</td>
                     <td class="px-4 py-2">{{ $invoice->total }} €</td>
                     <td class="px-4 py-2">{{ $invoice->date->format('d/m/Y H:i') }}</td>
+                    <td class="px-4 py-2">
+                        <a href="{{ route('invoices.show', $invoice) }}" class="text-blue-600 hover:underline">Ver</a> |
+                        <a href="{{ route('invoices.pdf', $invoice) }}" class="text-green-600 hover:underline">Descargar</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

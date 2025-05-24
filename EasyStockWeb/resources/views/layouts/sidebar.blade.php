@@ -11,7 +11,7 @@
             <img src="{{ asset('images/Open Box.png') }}" alt="Stock" class="h-8 w-8">
             <span class="ml-3 hidden group-hover:inline">Stock</span>
         </a>
-        <a href="#" class="group flex items-center px-4 py-2">
+        <a href="{{ route('invoices.invoices') }}" class="group flex items-center px-4 py-2">
             <img src="{{ asset('images/Purchase Order.png') }}" alt="Facturas" class="h-8 w-8">
             <span class="ml-3 hidden group-hover:inline">Facturas</span>
         </a>
