@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="max-w-3xl mx-auto py-10">
-    <h2 class="text-2xl font-bold mb-4">Facturación</h2>
+    <h2 class="text-2xl font-bold mb-4 pb-4">Facturación</h2>
 
     <table class="w-full table-auto border">
         <thead class="bg-gray-200">
