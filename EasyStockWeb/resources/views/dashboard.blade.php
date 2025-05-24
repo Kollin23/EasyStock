@@ -10,13 +10,23 @@
         </div>
         <div class="bg-white p-4 rounded-xl border border-blue-200 shadow-sm col-span-full">
             <p class="text-2xl mb-4">Últimas ventas</p>
-            <div class="space-y-2">
-                @for ($i = 0; $i < 5; $i++)
-                    <div class="bg-gray-200 h-6 rounded-md"></div>
-                @endfor
-            </div>
+    
+            @if ($latestInvoices->isEmpty())
+                <p class="text-gray-500">No hay ventas recientes.</p>
+            @else
+                <div class="space-y-2">
+                    @foreach ($latestInvoices as $invoice)
+                        <div class="flex justify-between items-center bg-gray-100 p-3 rounded-md">
+                            <span class="font-semibold">Venta #{{ $invoice->id }}</span>
+                            <span class="text-sm text-gray-600">{{ $invoice->date instanceof \Carbon\Carbon ? $invoice->date->format('d/m/Y H:i') : \Carbon\Carbon::parse($invoice->date)->format('d/m/Y H:i') }}</span>
+                            <span class="text-blue-600 font-bold">{{ number_format($invoice->total, 2) }} €</span>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
     const ctx = document.getElementById('incomeChart').getContext('2d');

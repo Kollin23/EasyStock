@@ -24,6 +24,12 @@ class DashboardController extends Controller
 
         $totals = $incomes->pluck('total');
 
-        return view('dashboard', compact('labels', 'totals'));
+        $latestInvoices = Invoice::where('user_id', Auth::id())
+            ->latest()
+            ->take(7)
+            ->with('products')
+            ->get();
+
+        return view('dashboard', compact('labels', 'totals', 'latestInvoices'));
     }
 }
