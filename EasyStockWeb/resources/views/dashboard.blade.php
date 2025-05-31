@@ -8,6 +8,16 @@
             <p class="text-2xl">Ingresos</p>
             <canvas id="incomeChart" height="100"></canvas>
         </div>
+        @if ($productosBajoStock->isNotEmpty())
+            <div class="bg-white p-6 rounded-xl border border-blue-200 shadow-sm">
+                <p class="text-2xl font-bold mb-4">Avisos de stock</p>
+                <ul class="list-inside text-red-600">
+                    @foreach ($productosBajoStock as $producto)
+                        <li>{{ $producto->name }} -> Stock: {{ $producto->stock }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="bg-white p-4 rounded-xl border border-blue-200 shadow-sm col-span-full">
             <p class="text-2xl mb-4">Últimas ventas</p>
     
